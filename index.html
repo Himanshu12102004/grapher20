@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grapher2.0</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <canvas></canvas>
+  <div class="frosted-glass"></div>
+  <div class="restrict">
+    <img src="./restricted.png" height="100px" alt="" />
+    <div style="
+          color: white;
+          font-family: sans-serif;
+          font-size: 25px;
+          text-align: center;
+        ">
+      Browser window too small, Use a laptop to view this website
+    </div>
+  </div>
+  <div class="inputAndShow">
+    <div class="inputAndShow__input">Click here to Enter Functions</div>
+    <div class="inputAndShow__show"></div>
+  </div>
+  <div class="calculator">
+    <div class="calculator__screen">
+      <div class="calculator__screen__fx">f(x)=</div>
+      <div class="calculator__screen__expression"></div>
+    </div>
+    <div class="calculator__buttons">
+      <div id="x" class="x"><i>x</i></div>
+      <div id="pi">π</div>
+      <div id="e">e</div>
+      <div id="ac">AC</div>
+      <div id="back"><img height="25px" src="back.png" alt="" /></div>
+      <div id="inv">inv</div>
+      <div id="log" class="lt" onclick="trigoAndLog(`log`)">log</div>
+      <div id="sin" class="lt" onclick="trigoAndLog(`sin`)">sin</div>
+      <div id="cos" class="lt" onclick="trigoAndLog(`cos`)">cos</div>
+      <div id="tan" class="lt" onclick="trigoAndLog(`tan`)">tan</div>
+      <div id="pow">
+        <div>x<sup>y</sup></div>
+      </div>
+      <div id="add" onclick="digit(`+`)">+</div>
+      <div id="d9" onclick="digit(9)">9</div>
+      <div id="d8" onclick="digit(8)">8</div>
+      <div id="d7" onclick="digit(7)">7</div>
+      <div id="sinh" class="invT" onclick="hyperbolic(`sinh`)">sinh</div>
+      <div id="subt" onclick="digit(`-`)">-</div>
+      <div id="d6" onclick="digit(6)">6</div>
+      <div id="d5" onclick="digit(5)">5</div>
+      <div id="d4" onclick="digit(4)">4</div>
+      <div id="cosh" class="invT" onclick="hyperbolic(`cosh`)">cosh</div>
+      <div id="mul" onclick="digit(`*`)">×</div>
+      <div id="d3" onclick="digit(3)">3</div>
+      <div id="d2" onclick="digit(2)">2</div>
+      <div id="d1" onclick="digit(1)">1</div>
+      <div id="tanh" class="invT" onclick="hyperbolic(`tanh`)">tanh</div>
+      <div id="div" class="divide" onclick="digit(`/`)">/</div>
+      <div id="d0" onclick="digit(0)">0</div>
+      <div id="dot" onclick="digit(`.`)">.</div>
+      <div id="bracketOpen" onclick="digit(`(`)">(</div>
+      <div id="bracketClose" onclick="digit(`)`)">)</div>
+      <div id="graph">Make Graph</div>
+    </div>
+  </div>
+  <div style="
+        position: absolute;
+        z-index: 130;
+        bottom: 0;
+        right: 0;
+        color: rgb(132, 129, 129);
+        font-family: sans-serif;
+        letter-spacing: 1px;
+      ">
+    By Himanshu
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.min.js"></script>
+<script src="./javaScript/script.js"></script>
+<script src="./javaScript/digits.js"></script>
+<script src="./javaScript/startPlotting.js"></script>
+
+</html>
